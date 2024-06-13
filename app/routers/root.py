@@ -13,5 +13,8 @@ router = APIRouter()
 
 @router.get("/")
 async def root(db = Depends(get_db)):
-    res =  crud.get_queries(db,limit = 10000)
-    return res
+    prior_queries =  crud.get_queries(db,limit = 10000)
+
+    if not prior_queries:
+        return {"message": "As soon as you write your first prompt it will appear here!"}
+    return prior_queries
