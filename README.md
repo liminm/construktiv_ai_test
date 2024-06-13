@@ -77,10 +77,15 @@ If you encounter issues with packages not being found, ensure that your Python e
 
 ## Demonstration
 
-Overview of past conversations at localhost:8000/. The application knows the context of past prompts and can interact with them as seen in prompt 5.
+Overview of past conversations at [localhost:8000/](localhost:8000/).
+
+
+The application knows the context of past prompts and can interact with them as seen in prompt 5.
 ![Application Screenshot](images/root_view.png)
 
-Interacting with the API endpoint of the ChatBot at localhost:8000/docs. The ChatBot can reply to inquiries set by the user. The user can choose in which kind of mood the ChatBot should reply in as well as the language.
+Interacting with the API endpoint of the ChatBot at  [localhost:8000/docs](localhost:8000/docs). 
+
+The ChatBot can reply to inquiries set by the user. The user can choose in which kind of mood the ChatBot should reply in as well as the language.
 On demand the type of reply expected from the ChatBot can be overwritten. Additionally a maximum amount of tokens a query can use can be set. 
 
 ![Application Screenshot](images/api_endpoint_prompt.png)
