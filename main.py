@@ -1,20 +1,16 @@
 from fastapi import FastAPI
 
+from app.routers.root import router as root_router
 from app.routers.queries import router as queries_router
-from settings import OPENAI_API_KEY
-import crud
 import models 
-from database import SessionLocal, engine
+from database import engine
 
 models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
-
-
+app.include_router(root_router)
 app.include_router(queries_router, prefix="/queries", tags=["queries"])
-
-
 
 
 if __name__ == "__main__":
