@@ -12,5 +12,5 @@ def create_query(db: Session, query: str, completion: str):
 
 
 def get_queries(db: Session, skip=0, limit=4):
-    return db.query(models.Query).order_by(models.Query.id.asc()).offset(skip).limit(limit).all()
+    return db.query(models.Query).order_by(models.Query.id.desc()).offset(skip).limit(limit).all()
 
