@@ -1,4 +1,4 @@
-# Construktiv OpenAI Mood Chatbot
+# Construktiv OpenAI Mood-Responsive Chatbot
 
 This is a ChatBot application which users can use to ask questions and set the mood of the response they desire as well as the language the response should be in. 
 It is written in Python with a FastAPI backend and using the OpenAI-API to generate responses. 
