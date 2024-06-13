@@ -79,7 +79,9 @@ Overview of past conversations at localhost:8000/. The application knows the con
 
 Interacting with the API endpoint of the ChatBot at localhost:8000/docs. The ChatBot can reply to inquiries set by the user. The user can choose in which kind of mood the ChatBot should reply in as well as the language.
 On demand the type of reply expected from the ChatBot can be overwritten. Additionally a maximum amount of tokens a query can use can be set. 
+
 ![Application Screenshot](images/api_endpoint_prompt.png)
+
 ![Application Screenshot](images/api_endpoint_response.png)
 
 
