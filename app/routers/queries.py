@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException
 from openai import OpenAI
-from database import SessionLocal
+from database import SessionLocal, get_db
 
 from settings import OPENAI_API_KEY, SYSTEM_PROMPT, MAX_TOTAL_TOKENS
 from models import Query
@@ -13,12 +13,6 @@ import crud
 router = APIRouter()
 
 
-def get_db():
-    db = SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()
 
 
 
