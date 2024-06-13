@@ -1,4 +1,4 @@
-# Construktiv OPENAI Mood Chatbot
+# Construktiv OpenAI Mood Chatbot
 
 This is a Python application designed to be run on Python 3.11. The application is launched using `python app/main.py` and can be accessed via `localhost:8000` to view past conversations and `localhost:8000/docs` to call the endpoints.
 
