@@ -70,3 +70,16 @@ This is a Python application designed to be run on Python 3.11. The application 
 ## Troubleshooting
 
 If you encounter issues with packages not being found, ensure that your Python environment is correctly set up and that the project directory has been added to the Python path as described in the setup instructions.
+
+
+## Demonstration
+
+Overview of past conversations at localhost:8000/. The application knows the context of past prompts and can interact with them.
+![Application Screenshot](images/root_view.png)
+
+Interacting with the API endpoint of the ChatBot at localhost:8000/docs. The ChatBot can reply to inquiries set by the user. The user can choose in which kind of mood the ChatBot should reply in as well as the language.
+On demand the type of reply expected from the ChatBot can be overwritten. Additionally a maximum amount of tokens a query can use can be set. 
+![Application Screenshot](images/api_endpoint_prompt.png)
+![Application Screenshot](images/api_endpoint_response.png)
+
+
