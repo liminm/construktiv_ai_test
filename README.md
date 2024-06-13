@@ -5,6 +5,8 @@ It is written in Python with a FastAPI backend and using the OpenAI-API to gener
 
 The application is launched using `python app/main.py` and can be accessed via `localhost:8000` to view past conversations and `localhost:8000/docs` to call the endpoints.
 
+Added info: The functionality of the ChatBot was already implemented on the second commit. Rest was added documentation and a minor change.
+
 ## Installation
 
 ### Prerequisites
