@@ -2,8 +2,8 @@ from fastapi import FastAPI
 
 from app.routers.root import router as root_router
 from app.routers.queries import router as queries_router
-import models 
-from database import engine
+import app.models as models 
+from app.database import engine
 
 models.Base.metadata.create_all(bind=engine)
 

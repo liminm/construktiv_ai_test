@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
 
-import models
+import app.models as models
 
 
 def create_query(db: Session, query: str, completion: str):

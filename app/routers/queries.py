@@ -1,28 +1,18 @@
 from fastapi import APIRouter, Depends, HTTPException
 from openai import OpenAI
-from database import SessionLocal, get_db
+from app.database import get_db
 
-from settings import OPENAI_API_KEY, SYSTEM_PROMPT, MAX_TOTAL_TOKENS
-from models import Query
-from crud import create_query
-import crud
-
-
+from app.settings import OPENAI_API_KEY, SYSTEM_PROMPT
+from app.routers.utils import get_prior_queries, calculate_tokens, token_limit_exceeded
+from app.crud import create_query
 
 
 router = APIRouter()
 
 
-
-
-
-
-
-
 client = OpenAI(
     api_key=OPENAI_API_KEY,
 )
-
 
 @router.get("/query")
 def query(
@@ -70,19 +60,3 @@ def query(
 
     return db_query
 
-
-def get_prior_queries(db, context_limit):
-    # Get the prior conversation from the database
-    prior_queries = crud.get_queries(db=db, limit=context_limit)[::-1]
-    return prior_queries
-
-def calculate_tokens(text):
-    token_count = len(text) // 4
-    return token_count
-
-
-def token_limit_exceeded(token_count, limit= 100000):
-    # Throw an exception if the token limit is exceeded
-    if token_count > limit:
-        raise ValueError("Token limit exceeded")
-    return token_count
